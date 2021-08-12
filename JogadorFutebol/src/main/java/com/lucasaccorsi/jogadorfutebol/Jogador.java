@@ -1,6 +1,8 @@
 package com.lucasaccorsi.jogadorfutebol;
 
-import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 
 /* @author lucas */
 
@@ -8,11 +10,11 @@ public class Jogador {
     
     private String nome;
     private String posicao;
-    private Calendar dataNacimento;
+    private LocalDate dataNacimento;
     
     public void Jogador(){}
 
-    public Jogador(String nome, String posicao, Calendar dataNacimento) {
+    public Jogador(String nome, String posicao, LocalDate dataNacimento) {
         super();
         this.nome = nome;
         this.posicao = posicao;
@@ -21,15 +23,15 @@ public class Jogador {
 
     @Override
     public String toString() {
-        return "Jogador{" + "nome=" + nome + ", posicao=" + posicao + ", dataNacimento=" +dataNacimento.get(Calendar.DAY_OF_MONTH) + "/" + dataNacimento.get(Calendar.MONTH) + "/" +dataNacimento.get(Calendar.YEAR) + '}';
+        return "Jogador{" + "nome: " + nome + ", posicao: " + posicao + ", dataNacimento: " + dataNacimento + '}';
     }
     
-    public int idade(){
-        Calendar hoje = Calendar.getInstance();
-        return hoje.get(Calendar.YEAR) - dataNacimento.get(Calendar.YEAR);
+    public long idade(){
+        LocalDate hoje = LocalDate.now();
+        return ChronoUnit.YEARS.between(this.dataNacimento, hoje);
     }
     
-    public int aposentar(){
+    public long aposentar(){
         
         if (this.posicao == "defesa"){
             return 40 - idade();

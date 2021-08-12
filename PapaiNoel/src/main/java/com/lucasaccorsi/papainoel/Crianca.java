@@ -1,6 +1,7 @@
 package com.lucasaccorsi.papainoel;
 
 /* @author lucas */
+
 public class Crianca {
     
     private String nome;
@@ -29,6 +30,7 @@ public class Crianca {
     }
     
     public boolean presente(){
+        
         if (getPersonalidade() == "boazinha"){
             return true;
         }

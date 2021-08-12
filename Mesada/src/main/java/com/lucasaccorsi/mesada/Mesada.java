@@ -15,7 +15,7 @@ public class Mesada {
         this.procentagemDevolucao = 0.005;
     }
 
-    public void setProcentagemDevolucao(double procentagemDevolucao) {
+    protected void setProcentagemDevolucao(double procentagemDevolucao) {
         this.procentagemDevolucao = procentagemDevolucao;
     }
     

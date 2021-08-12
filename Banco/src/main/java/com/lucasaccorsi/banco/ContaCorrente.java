@@ -4,8 +4,8 @@ package com.lucasaccorsi.banco;
 
 public class ContaCorrente extends Conta{
 
-    ContaCorrente(int i, String nome, double d) {
-        super(i, nome, d);
+    ContaCorrente(int numero, String titular, double saldo) {
+        super(numero, titular, saldo);
     }
 
     public double rendimento(){

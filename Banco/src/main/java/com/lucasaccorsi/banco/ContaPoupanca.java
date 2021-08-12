@@ -4,8 +4,8 @@ package com.lucasaccorsi.banco;
 
 public class ContaPoupanca extends Conta{
 
-    ContaPoupanca(int i, String nome, double d) {
-        super(i, nome, d);
+    ContaPoupanca(int numero, String titular, double saldo) {
+        super(numero, titular, saldo);
     }
     
     public double rendimento(){

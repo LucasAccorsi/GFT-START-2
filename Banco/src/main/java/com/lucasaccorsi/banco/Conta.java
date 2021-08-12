@@ -6,15 +6,15 @@ public class Conta {
 
     private int numero;
     private String titular;
-    private double Saldo;
+    private double saldo;
 
     public Conta() {}
 
-    public Conta(int numero, String titular, double Saldo) {
+    public Conta(int numero, String titular, double saldo) {
         super();
         this.numero = numero;
         this.titular = titular;
-        this.Saldo = Saldo;
+        this.saldo = saldo;
     }
 
     public int getNumero() {
@@ -32,13 +32,9 @@ public class Conta {
     }
 
     public double getSaldo() {
-        return Saldo;
+        return saldo;
     }
-    public void setSaldo(double Saldo) {
-        this.Saldo = Saldo;
-    }
-    
-    public double rendimento(){
-        return Saldo;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }
